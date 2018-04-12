@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-04-11T18:38:10</DateModified>
+  <DateModified>2018-04-11T19:04:47</DateModified>
   <ModuleName>seven_segment</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>X:/Desktop/EC311/ec311_project/iseconfig/seven_segment.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>X:/Desktop/EC311/ec311_project</ImplementationReportsDirectory>
+  <SavedFilePath>X:/Desktop/EC311/project/ec311_project/iseconfig/seven_segment.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>X:/Desktop/EC311/project/ec311_project\</ImplementationReportsDirectory>
   <DateInitialized>2018-04-11T18:38:09</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -35,14 +35,21 @@ module ASM (input clk,
  reg [15:0] password; 
  reg [15:0] inpassword;
  reg [5:0] current_state;
- reg [5:0] next_state;	
-
+ reg [3:0] input_state;
+ reg [5:0] next_state;
+ reg [3:0] next_input_state;
+ 
 // parameters for States, you will need more states obviously
 parameter IDLE = 6'b000000; //idle state 
-parameter GETFIRSTDIGIT = 6'b000001; // get_first_input_state // this is not a must, one can use counter instead of having another step, design choice
-parameter GETSECONDIGIT = 6'b000010; //get_second input state
-parameter GETTHIRDDIGIT = 6'b000011;
-parameter GETFOURTHDIGIT = 6'b000100;
+parameter LOCKED = 6'b000001; //get_locked_state
+parameter UNLOCKED = 6'b000010; //get_unlocked_state
+parameter CHANGING = 6'b000011; //get_changing_state
+parameter NOINPUT = 3'b000; //input_state does not receive any input from switches.
+parameter GETFIRSTDIGIT = 3'b001; // get_first_input_state // this is not a must, one can use counter instead of having another step, design choice
+parameter GETSECONDIGIT = 3'b010; //get_second input state
+parameter GETTHIRDDIGIT = 3'b011; //get_third_input_state
+parameter GETFOURTHDIGIT = 3'b100; //get_fourth_input_state
+
 // parameters for output, you will need more obviously
 parameter C=5'b?????; // you should decide on what should be the value of C, the answer depends on your binary_to_segment file implementation
 parameter L=5'b?????; // same for L and for other guys, each of them 5 bit. IN ssd module you will provide 20 bit input, each 5 bit will be converted into 7 bit SSD in binary to segment file.
@@ -56,9 +63,12 @@ parameter blank=5'b?????;
 		// your code goes here
 		if(rst==1)
 		current_state<= IDLE;
+		next_state <= IDLE;
+		input_state <= NOINPUT;
+		next_input_state <= NOINPUT;
 		else
 		current_state<= next_state;
-		
+		input_state <= next_input_state;
 	end
 
 
@@ -69,36 +79,78 @@ parameter blank=5'b?????;
 	//DO NOT ASSIGN VALUES TO OUTPUTS DO NOT ASSIGN VALUES TO REGISTERS
 	//just determine the next_state, that is all. 
 	//password = 0000 -> this should not be there for instance or LED = 1010 this should not be there as well
+	
+		next_state <= current_state;
 		
+		//IDLE state. 
 		if(current_state == IDLE)
 		begin
-			password[15:0] <= 16'b0000000000000000;
 			if(ent == 1)
-				next_state <= GETFIRSTDIGIT;
+				next_state <= LOCKED;
+				next_input_state <= GETFIRSTDIGIT;
 			else 
 				next_state <= current_state;
+				next_input_state <= NOINPUT;
 		end
-
-		else if ( current_state == GETFIRSTDIGIT )
-			 if (ent == 1)
-			 	next_state <= GETSECONDIGIT;
-			 else
-			 	next_state <= current_state;
-				
-		else if ( current_state == GETSECONDIGIT )
-			 if (ent == 1)
-			 	next_state <= GETTHIRDDIGIT;
-			 else
-			 	next_state <= current_state;
-
-		else if ( current_state == GETTHIRDDIGIT )
-			 if (ent == 1)
-			 	next_state <= GETFOURTHDIGIT;
-			 else
-			 	next_state <= current_state;
-
+		
 		else
-			next_state <= current_state;
+		   if(clr == 1)
+			    next_input_state <= GETFIRSTDIGIT;
+			else if (current_state == UNLOCKED)
+				 if (change == 1)
+				 //change password.
+					  next_state <= CHANGING; 
+					  next_input_state <= GETFIRSTDIGIT;
+				 else
+				 //lock again if input matches to the password.
+					  next_state <= GETFIRSTDIGIT; 
+			
+			//enter first digit.
+			if ( input_state == GETFIRSTDIGIT )
+				 if (ent == 1)
+					next_input_state <= GETSECONDIGIT;
+				 else
+					next_input_state <= input_state;
+			
+			//enter second digit.
+			else if ( input_state == GETSECONDIGIT )
+				 if (ent == 1)
+					next_input_state <= GETTHIRDDIGIT;
+				 else
+					next_input_state <= input_state;
+
+         //enter third digit.
+			else if ( input_state == GETTHIRDDIGIT )
+				 if (ent == 1)
+					next_input_state <= GETFOURTHDIGIT;
+				 else
+					next_input_state <= input_state;
+					
+			//enter fourth digit.
+         else if ( input_state == GETFOURTHDIGIT)
+			    if (ent == 1)
+					 //if locked, unlock if the input matches to the password.
+					 if (current_state == LOCKED)
+						if (password == inpassword)
+						  next_state = UNLOCKED;
+						  next_input_state = GETFIRSTDIGIT;
+						else
+						  next_state = IDLE;
+						  next_input_state = NOINPUT;
+						  
+					 //if unlocked, lock if the input matches to the password.
+					 else if (current_state == UNLOCKED)
+						if (password == inpassword)
+						  next_state = LOCKED;
+						  next_input_state = GETFIRSTDIGIT;
+						else
+						  next_state = UNLOCKED;
+						  next_input_state = GETFIRSTDIGIT;
+						  
+					 //if changing the password, change it. 
+					 else if (state == CHANGING)
+						current_state = UNLOCKED;
+						input_staet = GETFIRSTDIGIT;
 
 	end
 
@@ -107,8 +159,13 @@ parameter blank=5'b?????;
 	begin
 		if(rst)
 		begin
-			inpassword[15:0]<=0; // password which is taken coming from user, 
-			password[15:0]<=0;
+			inpassword[15:0] <= 0; // password which is taken coming from user, 
+			password[15:0] <=0 ;
+		end
+		
+		if(clr)
+		begin
+		  inpassword[15:0] <= 0;
 		end
 
 		else
@@ -128,25 +185,25 @@ parameter blank=5'b?????;
 
 			else if (current_state == GETSECONDIGIT)
 			begin
-
 				if(ent==1)
 					inpassword[11:8]<=sw[3:0]; // inpassword is the password entered by user, second 4 digit will be equal to current switch values
 				
 			end
 			else if (current_state == GETTHIRDDIGIT)
 			begin
-
 				if(ent==1)
 					inpassword[7:4]<=sw[3:0]; // inpassword is the password entered by user, second 4 digit will be equal to current switch values
 				
 			end
 			else if (current_state == GETFOURTHDIGIT)
 			begin
-
 				if(ent==1)
 					inpassword[3:0]<=sw[3:0]; // inpassword is the password entered by user, second 4 digit will be equal to current switch values
-				
+					 //if changing the password, change it. 
+					 if (state == CHANGING)
+						password <= inpassword;
 			end
+			
 	end
 
 
