@@ -209,8 +209,8 @@ parameter blank=5'b?????;
 
 	// Sequential part for outputs; this part is responsible from outputs; i.e. SSD and LEDS
 
-
-	always @(posedge clk)
+	clk_divider slowerClk(clk, rst, divided_clk); //slows down clock for password input
+	always @(posedge divided_clk)
 	begin
 
 		if(current_state == IDLE)
