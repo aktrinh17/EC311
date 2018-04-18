@@ -227,6 +227,16 @@ parameter blank=5'b?????;
 		begin
 		ssd <= { tire , 0,sw[3:0], blank, blank};	// you should modify this part slightly to blink it with 1Hz. 0 after tire is to complete 4 bit sw to 5 bit. Padding 4 bit sw with 0 in other words.	
 		end
+		
+		else if(current_state == GETTHIRDDIGIT)
+		begin
+		ssd <= { blank, tire, 0, sw[3:0], blank};	// you should modify this part slightly to blink it with 1Hz. 0 after tire is to complete 4 bit sw to 5 bit. Padding 4 bit sw with 0 in other words.	
+		end
+		
+		else if(current_state == GETFOURTHDIGIT)
+		begin
+		ssd <= { blank, blank, tire, 0,sw[3:0]};	// you should modify this part slightly to blink it with 1Hz. 0 after tire is to complete 4 bit sw to 5 bit. Padding 4 bit sw with 0 in other words.	
+		end
 		/*
 		 You need more else if obviously
 

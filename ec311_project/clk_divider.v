@@ -26,9 +26,9 @@ module clk_divider(
 	 
 	 
 
-parameter toggle_value = 21'b111111111111111111111;
+parameter toggle_value = 16'b1001110001000000; //40,000 in binary for 1kHz
 	 
-reg[20:0] cnt;
+reg[15:0] cnt;
 
 always@(posedge clk_in or posedge rst)
 begin

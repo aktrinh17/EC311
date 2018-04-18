@@ -20,37 +20,50 @@
 //////////////////////////////////////////////////////////////////////////////////
 module seven_segment(
     input clk,
-	 input [1:0] status,
-	 input [3:0] switch_test,
+	 input [19:0] big_bin,
+	 reg [4:0] seven_in,
 	 output reg [3:0] AN,
 	 output [6:0] seven_out
     );
+	wire rst; // this is here temporarily: will find out if it's needed
+	initial begin // Initial block , used for correct simulations
+		AN = 4'b1110;
+		seven_in = 0;
+		count = 0;
+	end
+	
+	//translates to 7 LED values
+	reg [6:0] seven_out0;
+	binary_to_segment disp0(big_bin[4:0],seven_out0);
+	reg [6:0] seven_out1;
+	binary_to_segment disp1(big_bin[9:5],seven_out1);
+	reg [6:0] seven_out2;
+	binary_to_segment disp2(big_bin[14:10],seven_out2);
+	reg [6:0] seven_out3;
+	binary_to_segment disp3(big_bin[19:15],seven_out3);
 
-initial AN = 4'b1110;
-reg [1:0] count = 0;
-reg [3:0] seven_in;
-
-binary_to_segment disp0(seven_in,seven_out);		//tranlate to 7 LED values
-
-always @(posedge clk) begin
+clk_divider slowerClk(clk, rst, divided_clk); //slows down the clock
+//Always block is missing...
+// Also count value is operating in very  high frequency? Think about how to fix it!
+	always @(posedge divided_clk) begin
 	count <= count + 1;
 	case (count)
 	 0: begin 
 		AN <= 4'b1110;
-		seven_in <= switch_test;	//dislpay floor number
+		seven_out <= seven_out0;
 	 end
 	 
 	 1: begin 
 		AN <= 4'b1101;
-		seven_in <= 0;					//coresponds to OFF status
+		seven_out <= seven_out1;	
 	end
 	2: begin 
 		AN <= 4'b1011;
-		seven_in <= 0;					//OFF
+		seven_out <= seven_out2;			
 	end
 	3: begin 
 		AN <= 4'b0111;
-		seven_in <= status+10;		//UP, DOWN, or STABLE
+		seven_out <= seven_out3;
 	end
 	endcase
 
