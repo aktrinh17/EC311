@@ -32,8 +32,16 @@ module seven_segment(
 		count = 0;
 	end
 	
+	//translates to 7 LED values
+	reg [6:0] seven_out0;
+	binary_to_segment disp0(big_bin[4:0],seven_out0);
+	reg [6:0] seven_out1;
+	binary_to_segment disp1(big_bin[9:5],seven_out1);
+	reg [6:0] seven_out2;
+	binary_to_segment disp2(big_bin[14:10],seven_out2);
+	reg [6:0] seven_out3;
+	binary_to_segment disp3(big_bin[19:15],seven_out3);
 
-binary_to_segment disp0(seven_in,seven_out);		//tranlate to 7 LED values
 clk_divider slowerClk(clk, rst, divided_clk); //slows down the clock
 //Always block is missing...
 // Also count value is operating in very  high frequency? Think about how to fix it!
@@ -42,20 +50,20 @@ clk_divider slowerClk(clk, rst, divided_clk); //slows down the clock
 	case (count)
 	 0: begin 
 		AN <= 4'b1110;
-		
+		seven_out <= seven_out0;
 	 end
 	 
 	 1: begin 
 		AN <= 4'b1101;
-			
+		seven_out <= seven_out1;	
 	end
 	2: begin 
 		AN <= 4'b1011;
-					
+		seven_out <= seven_out2;			
 	end
 	3: begin 
 		AN <= 4'b0111;
-		
+		seven_out <= seven_out3;
 	end
 	endcase
 
