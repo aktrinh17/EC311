@@ -1,0 +1,612 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: ASM.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ASM.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ASM"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : ASM
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\clk_divider.v" into library work
+Parsing module <clk_divider>.
+Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\binary_to_segment.v" into library work
+Parsing module <binary_to_segment>.
+Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\seven_segment.v" into library work
+Parsing module <seven_segment>.
+Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" into library work
+Parsing module <ASM>.
+WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 245: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 250: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 255: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 260: Concatenation with unsized literal; will interpret as 32 bits
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 245: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 250: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 255: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 260: Concatenation with unsized literal; will interpret as 32 bits
+
+Elaborating module <ASM>.
+
+Elaborating module <clk_divider>.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\clk_divider.v" Line 45: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <seven_segment>.
+
+Elaborating module <binary_to_segment>.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\seven_segment.v" Line 50: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:634 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\seven_segment.v" Line 29: Net <rst> does not have a driver.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 250: Result of 50-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 255: Result of 45-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 260: Result of 40-bit expression is truncated to fit in 20-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ASM>.
+    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v".
+        IDLE = 6'b000000
+        LOCKED = 6'b000001
+        UNLOCKED = 6'b000010
+        CHANGING = 6'b000011
+        NOINPUT = 3'b000
+        GETFIRSTDIGIT = 3'b001
+        GETSECONDIGIT = 3'b010
+        GETTHIRDDIGIT = 3'b011
+        GETFOURTHDIGIT = 3'b100
+        C = 5'b01101
+        L = 5'b01110
+        tire = 5'b01111
+        blank = 5'b00000
+        d = 5'b10000
+    Found 6-bit register for signal <current_state>.
+    Found 1-bit register for signal <input_state[3]_GND_1_o_equal_55_o>.
+    Found 20-bit register for signal <ssd>.
+INFO:Xst:1799 - State 000010 is never reached in FSM <current_state>.
+INFO:Xst:1799 - State 000011 is never reached in FSM <current_state>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000000                                         |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    WARNING:Xst:2404 -  FFs/Latches <led<1:6>> (without init value) have a constant value of 0 in block <ASM>.
+    WARNING:Xst:2404 -  FFs/Latches <input_state<3:1>> (without init value) have a constant value of 0 in block <ASM>.
+    Summary:
+	inferred  21 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <ASM> synthesized.
+
+Synthesizing Unit <clk_divider>.
+    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\clk_divider.v".
+        toggle_value = 16'b1001110001000000
+    Found 16-bit register for signal <cnt>.
+    Found 1-bit register for signal <divided_clk>.
+    Found 16-bit adder for signal <cnt[15]_GND_2_o_add_2_OUT> created at line 45.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <clk_divider> synthesized.
+
+Synthesizing Unit <seven_segment>.
+    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\seven_segment.v".
+WARNING:Xst:653 - Signal <rst> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 4-bit register for signal <AN>.
+    Found 7-bit register for signal <seven_out>.
+    Found 2-bit register for signal <count>.
+    Found 2-bit adder for signal <count[1]_GND_3_o_add_1_OUT> created at line 50.
+    Found 4x4-bit Read Only RAM for signal <count[1]_GND_3_o_wide_mux_2_OUT>
+    Found 7-bit 4-to-1 multiplexer for signal <count[1]_seven_out3[6]_wide_mux_3_OUT> created at line 51.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <seven_segment> synthesized.
+
+Synthesizing Unit <binary_to_segment>.
+    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\binary_to_segment.v".
+    Found 32x7-bit Read Only RAM for signal <seven_out>
+    Summary:
+	inferred   1 RAM(s).
+Unit <binary_to_segment> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 32x7-bit single-port Read Only RAM                    : 4
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 2
+ 2-bit adder                                           : 1
+# Registers                                            : 9
+ 1-bit register                                        : 3
+ 16-bit register                                       : 2
+ 2-bit register                                        : 1
+ 20-bit register                                       : 1
+ 4-bit register                                        : 1
+ 7-bit register                                        : 1
+# Multiplexers                                         : 3
+ 16-bit 2-to-1 multiplexer                             : 2
+ 7-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <ssd_0> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_1> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_2> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_3> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_6> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_8> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_9> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_13> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_19> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <binary_to_segment>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_seven_out> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <binary_in>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <seven_out>     |          |
+    -----------------------------------------------------------------------
+Unit <binary_to_segment> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clk_divider>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <clk_divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <seven_segment>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+INFO:Xst:3231 - The small RAM <Mram_count[1]_GND_3_o_wide_mux_2_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <seven_segment> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 32x7-bit single-port distributed Read Only RAM        : 4
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 3
+ 16-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+# Multiplexers                                         : 1
+ 7-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ssd_0> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_1> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_2> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_3> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_6> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_8> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_9> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_13> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ssd_19> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ssd_4> in Unit <ASM> is equivalent to the following 6 FFs/Latches, which will be removed : <ssd_5> <ssd_7> <ssd_10> <ssd_11> <ssd_12> <ssd_14> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <current_state[1:1]> with sequential encoding.
+--------------------
+ State  | Encoding
+--------------------
+ 000000 | 0
+ 000010 | unreached
+ 000001 | 1
+ 000011 | unreached
+--------------------
+
+Optimizing unit <ASM> ...
+
+Optimizing unit <seven_segment> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ASM, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 54
+ Flip-Flops                                            : 54
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ASM.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 160
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 30
+#      LUT2                        : 39
+#      LUT3                        : 2
+#      LUT4                        : 12
+#      LUT6                        : 7
+#      MUXCY                       : 30
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 54
+#      FD                          : 30
+#      FDC                         : 19
+#      FDRE                        : 2
+#      FDSE                        : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 23
+#      IBUF                        : 6
+#      OBUF                        : 17
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              50  out of  18224     0%  
+ Number of Slice LUTs:                   96  out of   9112     1%  
+    Number used as Logic:                96  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     98
+   Number with an unused Flip Flop:      48  out of     98    48%  
+   Number with an unused LUT:             2  out of     98     2%  
+   Number of fully used LUT-FF pairs:    48  out of     98    48%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          26
+ Number of bonded IOBs:                  24  out of    232    10%  
+    IOB Flip Flops/Latches:               4
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 36    |
+slowerClk/divided_clk              | NONE(ssd_4)            | 5     |
+sevenSEG/slowerClk/divided_clk     | NONE(sevenSEG/count_1) | 13    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.853ns (Maximum Frequency: 259.545MHz)
+   Minimum input arrival time before clock: 2.723ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.853ns (frequency: 259.545MHz)
+  Total number of paths / destination ports: 821 / 35
+-------------------------------------------------------------------------
+Delay:               3.853ns (Levels of Logic = 3)
+  Source:            slowerClk/cnt_2 (FF)
+  Destination:       slowerClk/cnt_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: slowerClk/cnt_2 to slowerClk/cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.981  slowerClk/cnt_2 (slowerClk/cnt_2)
+     LUT6:I0->O            1   0.203   0.684  slowerClk/cnt[15]_PWR_2_o_equal_2_o<15>2 (slowerClk/cnt[15]_PWR_2_o_equal_2_o<15>1)
+     LUT6:I4->O           17   0.203   1.028  slowerClk/cnt[15]_PWR_2_o_equal_2_o<15>3 (slowerClk/cnt[15]_PWR_2_o_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  slowerClk/Mcount_cnt_eqn_01 (slowerClk/Mcount_cnt_eqn_0)
+     FDC:D                     0.102          slowerClk/cnt_0
+    ----------------------------------------
+    Total                      3.853ns (1.160ns logic, 2.693ns route)
+                                       (30.1% logic, 69.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sevenSEG/slowerClk/divided_clk'
+  Clock period: 2.266ns (frequency: 441.248MHz)
+  Total number of paths / destination ports: 25 / 13
+-------------------------------------------------------------------------
+Delay:               2.266ns (Levels of Logic = 1)
+  Source:            sevenSEG/count_0 (FF)
+  Destination:       sevenSEG/count_0 (FF)
+  Source Clock:      sevenSEG/slowerClk/divided_clk rising
+  Destination Clock: sevenSEG/slowerClk/divided_clk rising
+
+  Data Path: sevenSEG/count_0 to sevenSEG/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              13   0.447   0.932  sevenSEG/count_0 (sevenSEG/count_0)
+     INV:I->O              1   0.206   0.579  sevenSEG/Mcount_count_xor<0>11_INV_0 (sevenSEG/Result<0>)
+     FD:D                      0.102          sevenSEG/count_0
+    ----------------------------------------
+    Total                      2.266ns (0.755ns logic, 1.511ns route)
+                                       (33.3% logic, 66.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              2.723ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       input_state (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to input_state
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            19   1.222   1.071  rst_IBUF (rst_IBUF)
+     FDC:CLR                   0.430          input_state
+    ----------------------------------------
+    Total                      2.723ns (1.652ns logic, 1.071ns route)
+                                       (60.7% logic, 39.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'slowerClk/divided_clk'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            sw<0> (PAD)
+  Destination:       ssd_15 (FF)
+  Destination Clock: slowerClk/divided_clk rising
+
+  Data Path: sw<0> to ssd_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  sw_0_IBUF (sw_0_IBUF)
+     FDRE:D                    0.102          ssd_15
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sevenSEG/slowerClk/divided_clk'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            sevenSEG/AN_3 (FF)
+  Destination:       AN<3> (PAD)
+  Source Clock:      sevenSEG/slowerClk/divided_clk rising
+
+  Data Path: sevenSEG/AN_3 to AN<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  sevenSEG/AN_3 (sevenSEG/AN_3)
+     OBUF:I->O                 2.571          AN_3_OBUF (AN<3>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.853|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sevenSEG/slowerClk/divided_clk
+------------------------------+---------+---------+---------+---------+
+                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------------+---------+---------+---------+---------+
+sevenSEG/slowerClk/divided_clk|    2.266|         |         |         |
+slowerClk/divided_clk         |    2.660|         |         |         |
+------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock slowerClk/divided_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.413|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.39 secs
+ 
+--> 
+
+Total memory usage is 251060 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   35 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+
