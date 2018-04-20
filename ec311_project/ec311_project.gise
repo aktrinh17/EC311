@@ -104,7 +104,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1524199024" xil_pn:in_ck="-3196834536157999655" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="7871612877417200692" xil_pn:start_ts="1524199014">
+    <transform xil_pn:end_ts="1524245696" xil_pn:in_ck="-3196834536157999655" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="7871612877417200692" xil_pn:start_ts="1524245686">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -126,7 +126,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1524199029" xil_pn:in_ck="-6217014309315299980" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1200891464135514554" xil_pn:start_ts="1524199024">
+    <transform xil_pn:end_ts="1524245701" xil_pn:in_ck="-6217014309315299980" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1200891464135514554" xil_pn:start_ts="1524245696">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ASM.bld"/>
@@ -135,11 +135,9 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1524199037" xil_pn:in_ck="-6217014266696857003" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1524199029">
+    <transform xil_pn:end_ts="1524245708" xil_pn:in_ck="-6217014266696857003" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1524245701">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ASM.pcf"/>
       <outfile xil_pn:name="ASM_map.map"/>
       <outfile xil_pn:name="ASM_map.mrp"/>
@@ -150,7 +148,7 @@
       <outfile xil_pn:name="ASM_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1524199071" xil_pn:in_ck="8906049909855120462" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1524199037">
+    <transform xil_pn:end_ts="1524245741" xil_pn:in_ck="8906049909855120462" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1524245708">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -165,7 +163,7 @@
       <outfile xil_pn:name="ASM_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1524199081" xil_pn:in_ck="87286747780" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1524199071">
+    <transform xil_pn:end_ts="1524245750" xil_pn:in_ck="87286747780" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1524245741">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ASM.ut"/>
@@ -177,7 +175,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1524194684" xil_pn:in_ck="129903991982" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="2682241697568822907" xil_pn:start_ts="1524194684">
+    <transform xil_pn:end_ts="1524245080" xil_pn:in_ck="129903991982" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="2682241697568822907" xil_pn:start_ts="1524245080">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -189,7 +187,7 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1524199071" xil_pn:in_ck="-6217019892331329967" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1524199066">
+    <transform xil_pn:end_ts="1524245741" xil_pn:in_ck="-6217019892331329967" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1524245736">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ASM.twr"/>

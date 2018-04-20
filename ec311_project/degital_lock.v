@@ -51,11 +51,11 @@ parameter GETTHIRDDIGIT = 6'b000110; //get_third_input_state
 parameter GETFOURTHDIGIT = 6'b000111; //get_fourth_input_state
 
 // parameters for output, you will need more obviously
-parameter C=5'd13; // you should decide on what should be the value of C, the answer depends on your binary_to_segment file implementation
-parameter L=5'd14; // same for L and for other guys, each of them 5 bit. IN ssd module you will provide 20 bit input, each 5 bit will be converted into 7 bit SSD in binary to segment file.
-parameter tire=5'd15; 
-parameter blank=5'd0;
-parameter d = 5'd16;
+parameter C=5'd12; // you should decide on what should be the value of C, the answer depends on your binary_to_segment file implementation
+parameter L=5'd16; // same for L and for other guys, each of them 5 bit. IN ssd module you will provide 20 bit input, each 5 bit will be converted into 7 bit SSD in binary to segment file.
+parameter tire=5'd17; 
+parameter blank=5'd18;
+parameter d = 5'd13;
 
 clk_divider slowerClk(clk, rst, 22'b1111010000100100000000, divided_clk); //slows down clock for password input
 //Sequential part for state transitions
@@ -227,27 +227,27 @@ clk_divider slowerClk(clk, rst, 22'b1111010000100100000000, divided_clk); //slow
 	   led <= current_state;
 		if(current_state == IDLE)
 		begin
-		ssd <= {C, L, 4'd5, d};	//CLSD
+		ssd <= {C, L, 5'd5, d};	//CLSD
 		end
 
 		else if(current_state == GETFIRSTDIGIT)
 		begin
-		ssd <= { 0,sw[3:0], blank, blank, blank};	// you should modify this part slightly to blink it with 1Hz. The 0 is at the beginning is to complete 4bit SW values to 5 bit.
+		ssd <= { 1'b0,sw[3:0], blank, blank, blank};	// you should modify this part slightly to blink it with 1Hz. The 0 is at the beginning is to complete 4bit SW values to 5 bit.
 		end
 
 		else if(current_state == GETSECONDIGIT)
 		begin
-		ssd <= { tire , 0,sw[3:0], blank, blank};	// you should modify this part slightly to blink it with 1Hz. 0 after tire is to complete 4 bit sw to 5 bit. Padding 4 bit sw with 0 in other words.	
+		ssd <= { tire , 1'b0,sw[3:0], blank, blank};	// you should modify this part slightly to blink it with 1Hz. 0 after tire is to complete 4 bit sw to 5 bit. Padding 4 bit sw with 0 in other words.	
 		end
 		
 		else if(current_state == GETTHIRDDIGIT)
 		begin
-		ssd <= { blank, tire, 0, sw[3:0], blank};	// you should modify this part slightly to blink it with 1Hz. 0 after tire is to complete 4 bit sw to 5 bit. Padding 4 bit sw with 0 in other words.	
+		ssd <= { tire, tire, 1'b0, sw[3:0], blank};	// you should modify this part slightly to blink it with 1Hz. 0 after tire is to complete 4 bit sw to 5 bit. Padding 4 bit sw with 0 in other words.	
 		end
 		
 		else if(current_state == GETFOURTHDIGIT)
 		begin
-		ssd <= { blank, blank, tire, 0,sw[3:0]};	// you should modify this part slightly to blink it with 1Hz. 0 after tire is to complete 4 bit sw to 5 bit. Padding 4 bit sw with 0 in other words.	
+		ssd <= { tire, tire, tire, 1'b0,sw[3:0]};	// you should modify this part slightly to blink it with 1Hz. 0 after tire is to complete 4 bit sw to 5 bit. Padding 4 bit sw with 0 in other words.	
 		end
 		
 	end
