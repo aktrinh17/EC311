@@ -1,0 +1,165 @@
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311-master/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311-master/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 
+xst -intstyle ise -ifn "X:/Desktop/EC311/project/ec311_project/ASM.xst" -ofn "X:/Desktop/EC311/project/ec311_project/ASM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc ASM.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ASM_map.ncd ASM.ngd ASM.pcf 
+par -w -intstyle ise -ol high -mt off ASM_map.ncd ASM.ncd ASM.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ASM.twx ASM.ncd -o ASM.twr ASM.pcf -ucf ASM.ucf 
+bitgen -intstyle ise -f ASM.ut ASM.ncd 

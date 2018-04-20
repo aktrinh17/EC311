@@ -39,7 +39,10 @@ begin
 		5'd10: seven_out= 7'b1111110;			//stable
 		5'd11: seven_out= 7'b1000001;			//up
 		5'd12: seven_out= 7'b0001001;			//down
-		
+		5'd13: seven_out = 7'b0110001;       //C
+		5'd14: seven_out = 7'b1110001;        //L
+		5'd15: seven_out = 7'b1111110;        //tire
+		5'd16: seven_out = 7'b1000010;
 		default: seven_out = 7'h1;
 	endcase
 end

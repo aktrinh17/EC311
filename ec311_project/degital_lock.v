@@ -26,52 +26,49 @@ module ASM (input clk,
     input ent,
     input change,
 	output reg [5:0] led,
-	output reg [27:0] ssd,
+	output [3:0] AN,
+	output [6:0] seven_out,
     input [3:0] sw); 
 
+//wire
+wire divided_clk;
 
 //registers
-
- reg [15:0] password; 
- reg [15:0] inpassword;
- reg [5:0] current_state;
- reg [3:0] input_state;
- reg [5:0] next_state;
- reg [3:0] next_input_state;
+reg [19:0] ssd;
+reg [15:0] password; 
+reg [15:0] inpassword;
+reg [5:0] current_state;
+reg [5:0] next_state;
+reg unlocked;
+reg changing;
  
 // parameters for States, you will need more states obviously
 parameter IDLE = 6'b000000; //idle state 
-parameter LOCKED = 6'b000001; //get_locked_state
 parameter UNLOCKED = 6'b000010; //get_unlocked_state
-parameter CHANGING = 6'b000011; //get_changing_state
-parameter NOINPUT = 3'b000; //input_state does not receive any input from switches.
-parameter GETFIRSTDIGIT = 3'b001; // get_first_input_state // this is not a must, one can use counter instead of having another step, design choice
-parameter GETSECONDIGIT = 3'b010; //get_second input state
-parameter GETTHIRDDIGIT = 3'b011; //get_third_input_state
-parameter GETFOURTHDIGIT = 3'b100; //get_fourth_input_state
+parameter GETFIRSTDIGIT = 6'b000100; // get_first_input_state // this is not a must, one can use counter instead of having another step, design choice
+parameter GETSECONDIGIT = 6'b000101; //get_second input state
+parameter GETTHIRDDIGIT = 6'b000110; //get_third_input_state
+parameter GETFOURTHDIGIT = 6'b000111; //get_fourth_input_state
 
 // parameters for output, you will need more obviously
-parameter C=5'b?????; // you should decide on what should be the value of C, the answer depends on your binary_to_segment file implementation
-parameter L=5'b?????; // same for L and for other guys, each of them 5 bit. IN ssd module you will provide 20 bit input, each 5 bit will be converted into 7 bit SSD in binary to segment file.
-parameter tire=5'b?????; 
-parameter blank=5'b?????;
+parameter C=5'd13; // you should decide on what should be the value of C, the answer depends on your binary_to_segment file implementation
+parameter L=5'd14; // same for L and for other guys, each of them 5 bit. IN ssd module you will provide 20 bit input, each 5 bit will be converted into 7 bit SSD in binary to segment file.
+parameter tire=5'd15; 
+parameter blank=5'd0;
+parameter d = 5'd16;
 
-
+clk_divider slowerClk(clk, rst, 22'b1111010000100100000000, divided_clk); //slows down clock for password input
 //Sequential part for state transitions
-	always @ (posedge clk or posedge rst)
+	always @ (posedge divided_clk or posedge rst)
 	begin
 		// your code goes here
 		if(rst==1)
 		begin
 		current_state<= IDLE;
-		next_state <= IDLE;
-		input_state <= NOINPUT;
-		next_input_state <= NOINPUT;
 		end
 		else
 		begin
 		current_state<= next_state;
-		input_state <= next_input_state;
 		end
 	end
 
@@ -91,87 +88,82 @@ parameter blank=5'b?????;
 		begin
 			if(ent == 1)
 			begin
-				next_state <= LOCKED;
-				next_input_state <= GETFIRSTDIGIT;
+				next_state <= GETFIRSTDIGIT;
 			end
 			else
-			begin
+			begin			
 				next_state <= current_state;
-				next_input_state <= NOINPUT;
 			end
 		end
 		
 		else
 		   if(clr == 1)
-			    next_input_state <= GETFIRSTDIGIT;
+			    next_state <= GETFIRSTDIGIT;
 			else if (current_state == UNLOCKED)
 				 if (change == 1)
 				 begin
 				 //change password.
-					  next_state <= CHANGING; 
-					  next_input_state <= GETFIRSTDIGIT;
+					  next_state <= GETFIRSTDIGIT; 
+					  changing <= 1'b1;
 				 end
 				 else
-				 //lock again if input matches to the password.
+				 begin
+				 //lock again if matches to the password.
 					  next_state <= GETFIRSTDIGIT; 
-			
+			    end
 			//enter first digit.
-			if ( input_state == GETFIRSTDIGIT )
+			if ( current_state == GETFIRSTDIGIT )
 				 if (ent == 1)
-					next_input_state <= GETSECONDIGIT;
+					next_state <= GETSECONDIGIT;
 				 else
-					next_input_state <= input_state;
+					next_state <= current_state;
 			
 			//enter second digit.
-			else if ( input_state == GETSECONDIGIT )
+			else if ( current_state == GETSECONDIGIT )
 				 if (ent == 1)
-					next_input_state <= GETTHIRDDIGIT;
+					next_state <= GETTHIRDDIGIT;
 				 else
-					next_input_state <= input_state;
+					next_state <= current_state;
 
          //enter third digit.
-			else if ( input_state == GETTHIRDDIGIT )
+			else if ( current_state == GETTHIRDDIGIT )
 				 if (ent == 1)
-					next_input_state <= GETFOURTHDIGIT;
+					next_state <= GETFOURTHDIGIT;
 				 else
-					next_input_state <= input_state;
+					next_state <= current_state;
 					
 			//enter fourth digit.
-         else if ( input_state == GETFOURTHDIGIT)
+         else if ( current_state == GETFOURTHDIGIT)
 			    if (ent == 1)
 					 //if locked, unlock if the input matches to the password.
-					 if (current_state == LOCKED)
+					 if (unlocked == 1'b0)
 						if (password == inpassword)
 						begin
-						  next_state = UNLOCKED;
-						  next_input_state = GETFIRSTDIGIT;
+						  next_state <= UNLOCKED;
 						end
 						else
 						begin
 						  next_state <= IDLE;
-						  next_input_state <= NOINPUT;
 						end
 					 //if unlocked, lock if the input matches to the password.
-					 else if (current_state == UNLOCKED)
-						if (password == inpassword)
-						begin
-						  next_state = LOCKED;
-						  next_input_state = GETFIRSTDIGIT;
-						end
-						else
-						begin
-						  next_state = UNLOCKED;
-						  next_input_state = GETFIRSTDIGIT;
-						end
-					 //if changing the password, change it. 
-					 else if (state == CHANGING)
-						current_state = UNLOCKED;
-						input_staet = GETFIRSTDIGIT;
+					 else
+					   if (changing == 1'b0)
+							if (password == inpassword)
+							begin
+							  next_state <= IDLE;
+							end
+							else
+							begin
+							  next_state <= UNLOCKED;
+							end
+					   //if changing the password, change it. 
+					   else
+						  next_state <= UNLOCKED;
 
 	end
 
 	 //Sequential part for control registers, this part is responsible from assigning control registers or stored values
-	always @ (posedge clk or posedge rst)
+	always @ (posedge divided_clk or posedge rst)
 	begin
 		if(rst)
 		begin
@@ -179,7 +171,7 @@ parameter blank=5'b?????;
 			password[15:0] <=0 ;
 		end
 		
-		if(clr)
+		else if(clr)
 		begin
 		  inpassword[15:0] <= 0;
 		end
@@ -213,11 +205,15 @@ parameter blank=5'b?????;
 			end
 			else if (current_state == GETFOURTHDIGIT)
 			begin
-				if(ent==1)
+				 //if changing the password, change it. 
+				 if (ent == 1 & changing == 1)
+				 begin
+					password[15:4] <= inpassword[15:4];
+					password[3:0] <= sw[3:0];
+				 end
+				 else if (ent == 1)
 					inpassword[3:0]<=sw[3:0]; // inpassword is the password entered by user, second 4 digit will be equal to current switch values
-					 //if changing the password, change it. 
-					 if (state == CHANGING)
-						password <= inpassword;
+
 			end
 			
 	end
@@ -225,13 +221,13 @@ parameter blank=5'b?????;
 
 	// Sequential part for outputs; this part is responsible from outputs; i.e. SSD and LEDS
 
-
-	always @(posedge clk)
+	seven_segment sevenSEG(clk, ssd, AN, seven_out);
+	always @(posedge divided_clk)
 	begin
-
+	   led <= current_state;
 		if(current_state == IDLE)
 		begin
-		ssd <= {C, L, five, d};	//CLSD
+		ssd <= {C, L, 4'd5, d};	//CLSD
 		end
 
 		else if(current_state == GETFIRSTDIGIT)
@@ -253,10 +249,7 @@ parameter blank=5'b?????;
 		begin
 		ssd <= { blank, blank, tire, 0,sw[3:0]};	// you should modify this part slightly to blink it with 1Hz. 0 after tire is to complete 4 bit sw to 5 bit. Padding 4 bit sw with 0 in other words.	
 		end
-		/*
-		 You need more else if obviously
-
-		*/
+		
 	end
 
 
