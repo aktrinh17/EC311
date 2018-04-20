@@ -62,13 +62,17 @@ parameter blank=5'b?????;
 	begin
 		// your code goes here
 		if(rst==1)
+		begin
 		current_state<= IDLE;
 		next_state <= IDLE;
 		input_state <= NOINPUT;
 		next_input_state <= NOINPUT;
+		end
 		else
+		begin
 		current_state<= next_state;
 		input_state <= next_input_state;
+		end
 	end
 
 
@@ -86,11 +90,15 @@ parameter blank=5'b?????;
 		if(current_state == IDLE)
 		begin
 			if(ent == 1)
+			begin
 				next_state <= LOCKED;
 				next_input_state <= GETFIRSTDIGIT;
-			else 
+			end
+			else
+			begin
 				next_state <= current_state;
 				next_input_state <= NOINPUT;
+			end
 		end
 		
 		else
@@ -98,9 +106,11 @@ parameter blank=5'b?????;
 			    next_input_state <= GETFIRSTDIGIT;
 			else if (current_state == UNLOCKED)
 				 if (change == 1)
+				 begin
 				 //change password.
 					  next_state <= CHANGING; 
 					  next_input_state <= GETFIRSTDIGIT;
+				 end
 				 else
 				 //lock again if input matches to the password.
 					  next_state <= GETFIRSTDIGIT; 
@@ -132,21 +142,27 @@ parameter blank=5'b?????;
 					 //if locked, unlock if the input matches to the password.
 					 if (current_state == LOCKED)
 						if (password == inpassword)
+						begin
 						  next_state = UNLOCKED;
 						  next_input_state = GETFIRSTDIGIT;
+						end
 						else
-						  next_state = IDLE;
-						  next_input_state = NOINPUT;
-						  
+						begin
+						  next_state <= IDLE;
+						  next_input_state <= NOINPUT;
+						end
 					 //if unlocked, lock if the input matches to the password.
 					 else if (current_state == UNLOCKED)
 						if (password == inpassword)
+						begin
 						  next_state = LOCKED;
 						  next_input_state = GETFIRSTDIGIT;
+						end
 						else
+						begin
 						  next_state = UNLOCKED;
 						  next_input_state = GETFIRSTDIGIT;
-						  
+						end
 					 //if changing the password, change it. 
 					 else if (state == CHANGING)
 						current_state = UNLOCKED;
