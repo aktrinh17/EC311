@@ -27,7 +27,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 155008 kilobytes
+Total memory usage is 155840 kilobytes
 
 Writing NGD file "ASM.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec

@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Fri Apr 20 14:35:42 2018
+# Process ID: 6260
+# Log file: X:/Desktop/EC311/project/ec311_project/planAhead_run_2/planAhead.log
+# Journal file: X:/Desktop/EC311/project/ec311_project/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source X:/Desktop/EC311/project/ec311_project/pa.fromHdl.tcl
+startgroup
+set_property package_pin U16 [get_ports changing]
+endgroup
+save_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+startgroup
+set_property package_pin V16 [get_ports unlocked]
+endgroup
+set_property is_loc_fixed false [get_ports [list  unlocked]]
+set_property is_loc_fixed true [get_ports [list  unlocked]]
+save_design
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+set_property package_pin "" [get_ports [list  unlocked]]
+startgroup
+set_property package_pin V16 [get_ports clear]
+endgroup
+save_design
+refresh_design
+startgroup
+set_property package_pin V16 [get_ports unlocked]
+endgroup
+save_design -force
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

@@ -47,7 +47,9 @@ begin
 		5'd18: seven_out = 7'b1111111;        //blank
 		5'd19: seven_out = 7'b0011000;        //P
 		5'd20: seven_out = 7'b1101010;        //n
-		
+		5'd21: seven_out = 7'b1001000;        //H
+		5'd22: seven_out = 7'b1000001;        //U
+		5'd23: seven_out = 7'b0111001;        //T
 		default: seven_out = 7'h1;
 	endcase
 end
