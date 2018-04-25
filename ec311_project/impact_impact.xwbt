@@ -1,8 +1,8 @@
 INTSTYLE=impact
-INFILE=X:\Desktop\EC311-master\ec311_project\impact.xsl
-OUTFILE=X:\Desktop\EC311-master\ec311_project\impact.xsl
+INFILE=X:\Desktop\EC311-master\EC311\ec311_project\impact.xsl
+OUTFILE=X:\Desktop\EC311-master\EC311\ec311_project\impact.xsl
 FAMILY=Single
 PART=Single
-WORKINGDIR=X:\Desktop\EC311-master\ec311_project
+WORKINGDIR=X:\Desktop\EC311-master\EC311\ec311_project
 LICENSE=iMPACT
 USER_INFO=iMPACT

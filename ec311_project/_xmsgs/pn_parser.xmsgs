@@ -8,19 +8,7 @@
 <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;X:/Desktop/EC311-master/EC311/ec311_project/binary_to_segment.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;X:/Desktop/EC311-master/EC311/ec311_project/clk_divider.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;X:/Desktop/EC311-master/EC311/ec311_project/debouncer.v&quot; into library work</arg>
-</msg>
-
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;X:/Desktop/EC311-master/EC311/ec311_project/degital_lock.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;X:/Desktop/EC311-master/EC311/ec311_project/seven_segment.v&quot; into library work</arg>
 </msg>
 
 </messages>

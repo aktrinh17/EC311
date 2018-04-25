@@ -5,7 +5,7 @@ Command Line: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -nt timestamp -uc ASM.ucf -p xc6slx16-csg324-3 ASM.ngc
 ASM.ngd
 
-Reading NGO file "X:/Desktop/EC311-master/ec311_project/ASM.ngc" ...
+Reading NGO file "X:/Desktop/EC311-master/EC311/ec311_project/ASM.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -27,7 +27,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 154304 kilobytes
+Total memory usage is 159852 kilobytes
 
 Writing NGD file "ASM.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec

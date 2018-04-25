@@ -68,6 +68,8 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="asm.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="asm.drc" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_2"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_3"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -104,7 +106,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1524097302" xil_pn:in_ck="-3196834536157999655" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="7871612877417200692" xil_pn:start_ts="1524097294">
+    <transform xil_pn:end_ts="1524432176" xil_pn:in_ck="-3196834536157999655" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="7871612877417200692" xil_pn:start_ts="1524432166">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -122,11 +124,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1524096309" xil_pn:in_ck="87286755405" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3734212952555459" xil_pn:start_ts="1524096309">
+    <transform xil_pn:end_ts="1524431999" xil_pn:in_ck="87286755405" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3734212952555459" xil_pn:start_ts="1524431999">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1524097307" xil_pn:in_ck="-6217014309315299980" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1200891464135514554" xil_pn:start_ts="1524097302">
+    <transform xil_pn:end_ts="1524432182" xil_pn:in_ck="-6217014309315299980" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-1200891464135514554" xil_pn:start_ts="1524432176">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ASM.bld"/>
@@ -135,9 +137,8 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1524097315" xil_pn:in_ck="-6217014266696857003" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1524097307">
+    <transform xil_pn:end_ts="1524432190" xil_pn:in_ck="-6217014266696857003" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1524432182">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
@@ -151,9 +152,8 @@
       <outfile xil_pn:name="ASM_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1524097339" xil_pn:in_ck="8906049909855120462" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1524097315">
+    <transform xil_pn:end_ts="1524432223" xil_pn:in_ck="8906049909855120462" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1524432190">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ASM.ncd"/>
       <outfile xil_pn:name="ASM.pad"/>
@@ -166,7 +166,7 @@
       <outfile xil_pn:name="ASM_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1524097348" xil_pn:in_ck="87286747780" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1524097339">
+    <transform xil_pn:end_ts="1524432233" xil_pn:in_ck="87286747780" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1524432223">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -180,13 +180,21 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1524095696" xil_pn:in_ck="129903991982" xil_pn:name="TRAN_genImpactFile" xil_pn:prop_ck="-7047989797201823252" xil_pn:start_ts="1524095694">
+    <transform xil_pn:end_ts="1524245080" xil_pn:in_ck="129903991982" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="2682241697568822907" xil_pn:start_ts="1524245080">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1524432095" xil_pn:in_ck="129903991982" xil_pn:name="TRAN_genImpactFile" xil_pn:prop_ck="-7047989797201823252" xil_pn:start_ts="1524432093">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1524097339" xil_pn:in_ck="-6217019892331329967" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1524097333">
+    <transform xil_pn:end_ts="1524432223" xil_pn:in_ck="-6217019892331329967" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1524432218">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ASM.twr"/>

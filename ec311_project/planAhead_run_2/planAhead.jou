@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2 (64-bit)
+# Build 194362 by xbuild on Fri Jul 20 18:52:11 MDT 2012
+# Start of session at: Sun Apr 22 15:36:54 2018
+# Process ID: 5996
+# Log file: X:/Desktop/EC311-master/EC311/ec311_project/planAhead_run_2/planAhead.log
+# Journal file: X:/Desktop/EC311-master/EC311/ec311_project/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source X:/Desktop/EC311-master/EC311/ec311_project/pa.fromHdl.tcl
+startgroup
+set_property package_pin U16 [get_ports changing]
+endgroup
+save_design -force

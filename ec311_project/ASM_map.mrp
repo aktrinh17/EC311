@@ -10,40 +10,40 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Wed Apr 18 20:21:48 2018
+Mapped Date    : Sun Apr 22 17:23:03 2018
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    1
+Number of warnings:    0
 Slice Logic Utilization:
-  Number of Slice Registers:                    50 out of  18,224    1%
-    Number used as Flip Flops:                  50
+  Number of Slice Registers:                   186 out of  18,224    1%
+    Number used as Flip Flops:                 186
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         85 out of   9,112    1%
-    Number used as logic:                       83 out of   9,112    1%
-      Number using O6 output only:              44
-      Number using O5 output only:              28
-      Number using O5 and O6:                   11
+  Number of Slice LUTs:                        247 out of   9,112    2%
+    Number used as logic:                      245 out of   9,112    2%
+      Number using O6 output only:             111
+      Number using O5 output only:               0
+      Number using O5 and O6:                  134
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
     Number used exclusively as route-thrus:      2
-      Number with same-slice register load:      0
-      Number with same-slice carry load:         2
+      Number with same-slice register load:      2
+      Number with same-slice carry load:         0
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    28 out of   2,278    1%
-  Nummber of MUXCYs used:                       32 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:           87
-    Number with an unused Flip Flop:            42 out of      87   48%
-    Number with an unused LUT:                   2 out of      87    2%
-    Number of fully used LUT-FF pairs:          43 out of      87   49%
-    Number of unique control sets:               4
+  Number of occupied Slices:                    84 out of   2,278    3%
+  Nummber of MUXCYs used:                      116 out of   4,556    2%
+  Number of LUT Flip Flop pairs used:          265
+    Number with an unused Flip Flop:            95 out of     265   35%
+    Number with an unused LUT:                  18 out of     265    6%
+    Number of fully used LUT-FF pairs:         152 out of     265   57%
+    Number of unique control sets:              16
     Number of slice register sites lost
-      to control set restrictions:              22 out of  18,224    1%
+      to control set restrictions:              54 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -52,9 +52,9 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        26 out of     232   11%
-    Number of LOCed IOBs:                       25 out of      26   96%
-    IOB Flip Flops:                              4
+  Number of bonded IOBs:                        28 out of     232   12%
+    Number of LOCed IOBs:                       28 out of      28  100%
+    IOB Flip Flops:                              5
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -65,11 +65,11 @@ Specific Feature Utilization:
     Number used as BUFGs:                        1
     Number used as BUFGMUX:                      0
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
-  Number of ILOGIC2/ISERDES2s:                   4 out of     248    1%
-    Number used as ILOGIC2s:                     4
-    Number used as ISERDES2s:                    0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
   Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
-  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   5 out of     248    2%
+    Number used as OLOGIC2s:                     5
+    Number used as OSERDES2s:                    0
   Number of BSCANs:                              0 out of       4    0%
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
@@ -83,11 +83,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.00
+Average Fanout of Non-Clock Nets:                3.71
 
-Peak Memory Usage:  341 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  353 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   5 secs 
 
 Table of Contents
 -----------------
@@ -110,18 +110,9 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Place:837 - Partially locked IO Bus is found. 
-    Following components of the bus are not locked: 
-   	 Comp: seven_out<0>
-
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network clr_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 1 more times for the following
-   (max. 5 shown):
-   change_IBUF
-   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
@@ -132,9 +123,6 @@ INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
    1.260 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 26 IOs, 25 are locked
-   and 1 are not locked. If you would like to print the names of these IOs,
-   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
@@ -149,9 +137,6 @@ TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
 
-To enable printing of redundant blocks removed and signals merged, set the
-detailed map report option and rerun map.
-
 Section 6 - IOB Properties
 --------------------------
 
@@ -164,14 +149,15 @@ Section 6 - IOB Properties
 | AN<2>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | AN<3>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | change                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| changing                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | clr                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | ent                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
 | led<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | rst                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | seven_out<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
@@ -181,10 +167,11 @@ Section 6 - IOB Properties
 | seven_out<4>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | seven_out<5>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | seven_out<6>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| sw<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
-| sw<1>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
-| sw<2>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
-| sw<3>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| sw<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<1>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<2>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<3>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| unlocked                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

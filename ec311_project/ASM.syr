@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: ASM.prj
 
@@ -105,106 +105,157 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\clk_divider.v" into library work
+Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\clk_divider.v" into library work
 Parsing module <clk_divider>.
-Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\binary_to_segment.v" into library work
+Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\binary_to_segment.v" into library work
 Parsing module <binary_to_segment>.
-Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\seven_segment.v" into library work
+Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\seven_segment.v" into library work
 Parsing module <seven_segment>.
-Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" into library work
+Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\debouncer.v" into library work
+Parsing module <debouncer>.
+Analyzing Verilog file "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v" into library work
 Parsing module <ASM>.
-WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 245: Concatenation with unsized literal; will interpret as 32 bits
-WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 250: Concatenation with unsized literal; will interpret as 32 bits
-WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 255: Concatenation with unsized literal; will interpret as 32 bits
-WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 260: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:568 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v" Line 108: Constant value is truncated to fit in <2> bits.
+WARNING:HDLCompiler:568 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v" Line 321: Constant value is truncated to fit in <4> bits.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 245: Concatenation with unsized literal; will interpret as 32 bits
-WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 250: Concatenation with unsized literal; will interpret as 32 bits
-WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 255: Concatenation with unsized literal; will interpret as 32 bits
-WARNING:HDLCompiler:327 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 260: Concatenation with unsized literal; will interpret as 32 bits
 
 Elaborating module <ASM>.
 
 Elaborating module <clk_divider>.
-WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\clk_divider.v" Line 45: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\clk_divider.v" Line 42: Result of 29-bit expression is truncated to fit in 28-bit target.
+WARNING:HDLCompiler:189 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v" Line 71: Size mismatch in connection of port <toggle_value>. Formal port size is 28-bit while actual signal size is 26-bit.
+WARNING:HDLCompiler:189 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v" Line 72: Size mismatch in connection of port <toggle_value>. Formal port size is 28-bit while actual signal size is 25-bit.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v" Line 100: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v" Line 110: Result of 4-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <debouncer>.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v" Line 130: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v" Line 148: Result of 6-bit expression is truncated to fit in 5-bit target.
 
 Elaborating module <seven_segment>.
 
 Elaborating module <binary_to_segment>.
-WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\seven_segment.v" Line 50: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:634 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\seven_segment.v" Line 29: Net <rst> does not have a driver.
-WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 250: Result of 50-bit expression is truncated to fit in 20-bit target.
-WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 255: Result of 45-bit expression is truncated to fit in 20-bit target.
-WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v" Line 260: Result of 40-bit expression is truncated to fit in 20-bit target.
+WARNING:HDLCompiler:189 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\seven_segment.v" Line 46: Size mismatch in connection of port <toggle_value>. Formal port size is 28-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\seven_segment.v" Line 50: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:634 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\seven_segment.v" Line 29: Net <rst> does not have a driver.
+WARNING:HDLCompiler:413 - "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v" Line 426: Result of 4-bit expression is truncated to fit in 3-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <ASM>.
-    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\degital_lock.v".
+    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\degital_lock.v".
         IDLE = 6'b000000
-        LOCKED = 6'b000001
         UNLOCKED = 6'b000010
         CHANGING = 6'b000011
-        NOINPUT = 3'b000
-        GETFIRSTDIGIT = 3'b001
-        GETSECONDIGIT = 3'b010
-        GETTHIRDDIGIT = 3'b011
-        GETFOURTHDIGIT = 3'b100
-        C = 5'b01101
-        L = 5'b01110
-        tire = 5'b01111
-        blank = 5'b00000
-        d = 5'b10000
+        GETFIRSTDIGIT = 6'b000100
+        GETSECONDIGIT = 6'b000101
+        GETTHIRDDIGIT = 6'b000110
+        GETFOURTHDIGIT = 6'b000111
+        ILOVEEC311 = 6'b001000
+        OUT = 6'b001001
+        C = 5'b01100
+        L = 5'b10000
+        tire = 5'b10001
+        blank = 5'b10010
+        d = 5'b01101
+    Found 16-bit register for signal <password>.
     Found 6-bit register for signal <current_state>.
-    Found 1-bit register for signal <input_state[3]_GND_1_o_equal_55_o>.
+    Found 1-bit register for signal <inpassword<15>>.
+    Found 1-bit register for signal <inpassword<14>>.
+    Found 1-bit register for signal <inpassword<13>>.
+    Found 1-bit register for signal <inpassword<12>>.
+    Found 1-bit register for signal <inpassword<11>>.
+    Found 1-bit register for signal <inpassword<10>>.
+    Found 1-bit register for signal <inpassword<9>>.
+    Found 1-bit register for signal <inpassword<8>>.
+    Found 1-bit register for signal <inpassword<7>>.
+    Found 1-bit register for signal <inpassword<6>>.
+    Found 1-bit register for signal <inpassword<5>>.
+    Found 1-bit register for signal <inpassword<4>>.
+    Found 1-bit register for signal <inpassword<3>>.
+    Found 1-bit register for signal <inpassword<2>>.
+    Found 1-bit register for signal <inpassword<1>>.
+    Found 1-bit register for signal <inpassword<0>>.
+    Found 4-bit register for signal <timer>.
+    Found 4-bit register for signal <prev_sw>.
+    Found 3-bit register for signal <timer_out>.
+    Found 3-bit register for signal <cnt>.
+    Found 5-bit register for signal <timer_bd>.
+    Found 1-bit register for signal <unlocked>.
+    Found 1-bit register for signal <changing>.
     Found 20-bit register for signal <ssd>.
-INFO:Xst:1799 - State 000010 is never reached in FSM <current_state>.
-INFO:Xst:1799 - State 000011 is never reached in FSM <current_state>.
+    Found 3-bit register for signal <timer_out_blank>.
+    Found 5-bit register for signal <led>.
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
-    | States             | 4                                              |
-    | Transitions        | 3                                              |
-    | Inputs             | 3                                              |
-    | Outputs            | 1                                              |
-    | Clock              | clk (rising_edge)                              |
+    | States             | 9                                              |
+    | Transitions        | 49                                             |
+    | Inputs             | 10                                             |
+    | Outputs            | 10                                             |
+    | Clock              | divided_clk (rising_edge)                      |
     | Reset              | rst (positive)                                 |
     | Reset type         | asynchronous                                   |
     | Reset State        | 000000                                         |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    WARNING:Xst:2404 -  FFs/Latches <led<1:6>> (without init value) have a constant value of 0 in block <ASM>.
-    WARNING:Xst:2404 -  FFs/Latches <input_state<3:1>> (without init value) have a constant value of 0 in block <ASM>.
+    Found 4-bit adder for signal <timer[3]_GND_1_o_add_6_OUT> created at line 100.
+    Found 3-bit adder for signal <timer_out[2]_GND_1_o_add_14_OUT> created at line 110.
+    Found 3-bit adder for signal <cnt[2]_GND_1_o_add_21_OUT> created at line 130.
+    Found 5-bit adder for signal <timer_bd[4]_GND_1_o_add_27_OUT> created at line 148.
+    Found 3-bit adder for signal <timer_out_blank[2]_GND_1_o_add_120_OUT> created at line 426.
+    Found 20-bit 8-to-1 multiplexer for signal <_n0550> created at line 394.
+    Found 4-bit comparator greater for signal <n0001> created at line 81
+    Found 4-bit comparator not equal for signal <n0008> created at line 93
+    Found 3-bit comparator greater for signal <n0017> created at line 108
+    Found 5-bit comparator greater for signal <n0036> created at line 172
+    Found 16-bit comparator equal for signal <password[15]_inpassword[15]_equal_66_o> created at line 279
+    Found 3-bit comparator greater for signal <n0065> created at line 319
+    WARNING:Xst:2404 -  FFs/Latches <led<5:5>> (without init value) have a constant value of 0 in block <ASM>.
     Summary:
-	inferred  21 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  81 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  54 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <ASM> synthesized.
 
 Synthesizing Unit <clk_divider>.
-    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\clk_divider.v".
-        toggle_value = 16'b1001110001000000
-    Found 16-bit register for signal <cnt>.
+    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\clk_divider.v".
+    Found 28-bit register for signal <cnt>.
     Found 1-bit register for signal <divided_clk>.
-    Found 16-bit adder for signal <cnt[15]_GND_2_o_add_2_OUT> created at line 45.
+    Found 28-bit adder for signal <cnt[27]_GND_2_o_add_2_OUT> created at line 42.
+    Found 28-bit comparator equal for signal <cnt[27]_toggle_value[27]_equal_2_o> created at line 37
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  17 D-type flip-flop(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   1 Comparator(s).
 	inferred   1 Multiplexer(s).
 Unit <clk_divider> synthesized.
 
+Synthesizing Unit <debouncer>.
+    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\debouncer.v".
+    Found 1-bit register for signal <clean_out_tmp1>.
+    Found 1-bit register for signal <clean_out_tmp2>.
+    Found 1-bit register for signal <clean_out>.
+    Found 1-bit register for signal <noisy_in_reg>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <debouncer> synthesized.
+
 Synthesizing Unit <seven_segment>.
-    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\seven_segment.v".
+    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\seven_segment.v".
 WARNING:Xst:653 - Signal <rst> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 4-bit register for signal <AN>.
     Found 7-bit register for signal <seven_out>.
     Found 2-bit register for signal <count>.
-    Found 2-bit adder for signal <count[1]_GND_3_o_add_1_OUT> created at line 50.
-    Found 4x4-bit Read Only RAM for signal <count[1]_GND_3_o_wide_mux_2_OUT>
+    Found 2-bit adder for signal <count[1]_GND_4_o_add_1_OUT> created at line 50.
+    Found 4x4-bit Read Only RAM for signal <count[1]_GND_4_o_wide_mux_2_OUT>
     Found 7-bit 4-to-1 multiplexer for signal <count[1]_seven_out3[6]_wide_mux_3_OUT> created at line 51.
     Summary:
 	inferred   1 RAM(s).
@@ -214,7 +265,7 @@ WARNING:Xst:653 - Signal <rst> is used but never assigned. This sourceless signa
 Unit <seven_segment> synthesized.
 
 Synthesizing Unit <binary_to_segment>.
-    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\ec311_project\binary_to_segment.v".
+    Related source file is "\\ad\eng\users\a\k\aktrinh\Desktop\EC311-master\EC311\ec311_project\binary_to_segment.v".
     Found 32x7-bit Read Only RAM for signal <seven_out>
     Summary:
 	inferred   1 RAM(s).
@@ -227,18 +278,35 @@ Macro Statistics
 # RAMs                                                 : 5
  32x7-bit single-port Read Only RAM                    : 4
  4x4-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 3
- 16-bit adder                                          : 2
+# Adders/Subtractors                                   : 9
  2-bit adder                                           : 1
-# Registers                                            : 9
- 1-bit register                                        : 3
- 16-bit register                                       : 2
+ 28-bit adder                                          : 3
+ 3-bit adder                                           : 3
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 40
+ 1-bit register                                        : 25
+ 16-bit register                                       : 1
  2-bit register                                        : 1
  20-bit register                                       : 1
- 4-bit register                                        : 1
+ 28-bit register                                       : 3
+ 3-bit register                                        : 3
+ 4-bit register                                        : 3
+ 5-bit register                                        : 2
  7-bit register                                        : 1
-# Multiplexers                                         : 3
- 16-bit 2-to-1 multiplexer                             : 2
+# Comparators                                          : 9
+ 16-bit comparator equal                               : 1
+ 28-bit comparator equal                               : 3
+ 3-bit comparator greater                              : 2
+ 4-bit comparator greater                              : 1
+ 4-bit comparator not equal                            : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 58
+ 1-bit 2-to-1 multiplexer                              : 16
+ 16-bit 2-to-1 multiplexer                             : 1
+ 20-bit 2-to-1 multiplexer                             : 36
+ 20-bit 8-to-1 multiplexer                             : 1
+ 28-bit 2-to-1 multiplexer                             : 3
  7-bit 4-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
 
@@ -248,18 +316,17 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <ssd_0> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_1> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_2> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_3> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_6> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_8> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_9> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_13> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_19> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <ASM>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+The following registers are absorbed into counter <timer_out_blank>: 1 register on signal <timer_out_blank>.
+The following registers are absorbed into counter <timer>: 1 register on signal <timer>.
+The following registers are absorbed into counter <timer_bd>: 1 register on signal <timer_bd>.
+The following registers are absorbed into counter <timer_out>: 1 register on signal <timer_out>.
+Unit <ASM> synthesized (advanced).
 
 Synthesizing (advanced) Unit <binary_to_segment>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_seven_out> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3231 - The small RAM <Mram_seven_out> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -278,7 +345,7 @@ Unit <clk_divider> synthesized (advanced).
 
 Synthesizing (advanced) Unit <seven_segment>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
-INFO:Xst:3231 - The small RAM <Mram_count[1]_GND_3_o_wide_mux_2_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram_count[1]_GND_4_o_wide_mux_2_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -298,12 +365,26 @@ Macro Statistics
 # RAMs                                                 : 5
  32x7-bit single-port distributed Read Only RAM        : 4
  4x4-bit single-port distributed Read Only RAM         : 1
-# Counters                                             : 3
- 16-bit up counter                                     : 2
+# Counters                                             : 9
  2-bit up counter                                      : 1
-# Registers                                            : 34
- Flip-Flops                                            : 34
-# Multiplexers                                         : 1
+ 28-bit up counter                                     : 3
+ 3-bit up counter                                      : 3
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 81
+ Flip-Flops                                            : 81
+# Comparators                                          : 9
+ 16-bit comparator equal                               : 1
+ 28-bit comparator equal                               : 3
+ 3-bit comparator greater                              : 2
+ 4-bit comparator greater                              : 1
+ 4-bit comparator not equal                            : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 55
+ 1-bit 2-to-1 multiplexer                              : 16
+ 16-bit 2-to-1 multiplexer                             : 1
+ 20-bit 2-to-1 multiplexer                             : 36
+ 20-bit 8-to-1 multiplexer                             : 1
  7-bit 4-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
 
@@ -312,25 +393,20 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <ssd_0> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_1> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_2> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_3> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_6> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_8> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_9> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_13> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ssd_19> (without init value) has a constant value of 0 in block <ASM>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <ssd_4> in Unit <ASM> is equivalent to the following 6 FFs/Latches, which will be removed : <ssd_5> <ssd_7> <ssd_10> <ssd_11> <ssd_12> <ssd_14> 
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <current_state[1:1]> with sequential encoding.
+Optimizing FSM <FSM_0> on signal <current_state[1:6]> with user encoding.
 --------------------
  State  | Encoding
 --------------------
- 000000 | 0
- 000010 | unreached
- 000001 | 1
- 000011 | unreached
+ 000000 | 000000
+ 001000 | 001000
+ 000100 | 000100
+ 000011 | 000011
+ 000101 | 000101
+ 000110 | 000110
+ 000111 | 000111
+ 000010 | 000010
+ 001001 | 001001
 --------------------
 
 Optimizing unit <ASM> ...
@@ -339,7 +415,9 @@ Optimizing unit <seven_segment> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block ASM, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block ASM, actual ratio is 4.
+FlipFlop cnt_1 has been replicated 1 time(s)
+FlipFlop cnt_2 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -347,8 +425,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 54
- Flip-Flops                                            : 54
+# Registers                                            : 191
+ Flip-Flops                                            : 191
 
 =========================================================================
 
@@ -371,27 +449,30 @@ Top Level Output File Name         : ASM.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 160
+# BELS                             : 498
 #      GND                         : 1
 #      INV                         : 6
-#      LUT1                        : 30
-#      LUT2                        : 39
-#      LUT3                        : 2
-#      LUT4                        : 12
-#      LUT6                        : 7
-#      MUXCY                       : 30
+#      LUT2                        : 111
+#      LUT3                        : 33
+#      LUT4                        : 16
+#      LUT5                        : 65
+#      LUT6                        : 62
+#      MUXCY                       : 105
+#      MUXF7                       : 14
 #      VCC                         : 1
-#      XORCY                       : 32
-# FlipFlops/Latches                : 54
-#      FD                          : 30
-#      FDC                         : 19
-#      FDRE                        : 2
-#      FDSE                        : 3
+#      XORCY                       : 84
+# FlipFlops/Latches                : 191
+#      FD                          : 49
+#      FDC                         : 66
+#      FDCE                        : 32
+#      FDE                         : 27
+#      FDR                         : 9
+#      FDRE                        : 8
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 23
-#      IBUF                        : 6
-#      OBUF                        : 17
+# IO Buffers                       : 27
+#      IBUF                        : 8
+#      OBUF                        : 19
 
 Device utilization summary:
 ---------------------------
@@ -400,21 +481,21 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              50  out of  18224     0%  
- Number of Slice LUTs:                   96  out of   9112     1%  
-    Number used as Logic:                96  out of   9112     1%  
+ Number of Slice Registers:             186  out of  18224     1%  
+ Number of Slice LUTs:                  293  out of   9112     3%  
+    Number used as Logic:               293  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:     98
-   Number with an unused Flip Flop:      48  out of     98    48%  
-   Number with an unused LUT:             2  out of     98     2%  
-   Number of fully used LUT-FF pairs:    48  out of     98    48%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:    308
+   Number with an unused Flip Flop:     122  out of    308    39%  
+   Number with an unused LUT:            15  out of    308     4%  
+   Number of fully used LUT-FF pairs:   171  out of    308    55%  
+   Number of unique control sets:        16
 
 IO Utilization: 
- Number of IOs:                          26
- Number of bonded IOBs:                  24  out of    232    10%  
-    IOB Flip Flops/Latches:               4
+ Number of IOs:                          28
+ Number of bonded IOBs:                  28  out of    232    12%  
+    IOB Flip Flops/Latches:               5
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -440,8 +521,9 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 36    |
-slowerClk/divided_clk              | NONE(ssd_4)            | 5     |
+clk                                | BUFGP                  | 158   |
+slowerClk/divided_clk              | NONE(prev_sw_0)        | 12    |
+slowerClk_2Hz/divided_clk          | NONE(timer_bd_0)       | 8     |
 sevenSEG/slowerClk/divided_clk     | NONE(sevenSEG/count_1) | 13    |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -454,9 +536,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.853ns (Maximum Frequency: 259.545MHz)
-   Minimum input arrival time before clock: 2.723ns
-   Maximum output required time after clock: 3.597ns
+   Minimum period: 4.296ns (Maximum Frequency: 232.774MHz)
+   Minimum input arrival time before clock: 5.768ns
+   Maximum output required time after clock: 3.701ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -465,87 +547,189 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.853ns (frequency: 259.545MHz)
-  Total number of paths / destination ports: 821 / 35
+  Clock period: 4.296ns (frequency: 232.774MHz)
+  Total number of paths / destination ports: 38061 / 193
 -------------------------------------------------------------------------
-Delay:               3.853ns (Levels of Logic = 3)
-  Source:            slowerClk/cnt_2 (FF)
-  Destination:       slowerClk/cnt_0 (FF)
+Delay:               4.296ns (Levels of Logic = 35)
+  Source:            slowerClk/cnt_0 (FF)
+  Destination:       slowerClk/cnt_27 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: slowerClk/cnt_2 to slowerClk/cnt_0
+  Data Path: slowerClk/cnt_0 to slowerClk/cnt_27
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q              2   0.447   0.981  slowerClk/cnt_2 (slowerClk/cnt_2)
-     LUT6:I0->O            1   0.203   0.684  slowerClk/cnt[15]_PWR_2_o_equal_2_o<15>2 (slowerClk/cnt[15]_PWR_2_o_equal_2_o<15>1)
-     LUT6:I4->O           17   0.203   1.028  slowerClk/cnt[15]_PWR_2_o_equal_2_o<15>3 (slowerClk/cnt[15]_PWR_2_o_equal_2_o)
-     LUT2:I1->O            1   0.205   0.000  slowerClk/Mcount_cnt_eqn_01 (slowerClk/Mcount_cnt_eqn_0)
-     FDC:D                     0.102          slowerClk/cnt_0
+     FDC:C->Q              2   0.447   0.981  slowerClk/cnt_0 (slowerClk/cnt_0)
+     LUT6:I0->O            1   0.203   0.000  slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_lut<0> (slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_cy<0> (slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_cy<1> (slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_cy<2> (slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_cy<3> (slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_cy<3>)
+     MUXCY:CI->O          30   0.019   1.264  slowerClk/Mcompar_cnt[27]_toggle_value[27]_equal_2_o_cy<4> (slowerClk/cnt[27]_toggle_value[27]_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  slowerClk/Mcount_cnt_lut<0> (slowerClk/Mcount_cnt_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  slowerClk/Mcount_cnt_cy<0> (slowerClk/Mcount_cnt_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<1> (slowerClk/Mcount_cnt_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<2> (slowerClk/Mcount_cnt_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<3> (slowerClk/Mcount_cnt_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<4> (slowerClk/Mcount_cnt_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<5> (slowerClk/Mcount_cnt_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<6> (slowerClk/Mcount_cnt_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<7> (slowerClk/Mcount_cnt_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<8> (slowerClk/Mcount_cnt_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<9> (slowerClk/Mcount_cnt_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<10> (slowerClk/Mcount_cnt_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<11> (slowerClk/Mcount_cnt_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<12> (slowerClk/Mcount_cnt_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<13> (slowerClk/Mcount_cnt_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<14> (slowerClk/Mcount_cnt_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<15> (slowerClk/Mcount_cnt_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<16> (slowerClk/Mcount_cnt_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<17> (slowerClk/Mcount_cnt_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<18> (slowerClk/Mcount_cnt_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<19> (slowerClk/Mcount_cnt_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<20> (slowerClk/Mcount_cnt_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<21> (slowerClk/Mcount_cnt_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<22> (slowerClk/Mcount_cnt_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<23> (slowerClk/Mcount_cnt_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<24> (slowerClk/Mcount_cnt_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  slowerClk/Mcount_cnt_cy<25> (slowerClk/Mcount_cnt_cy<25>)
+     MUXCY:CI->O           0   0.019   0.000  slowerClk/Mcount_cnt_cy<26> (slowerClk/Mcount_cnt_cy<26>)
+     XORCY:CI->O           1   0.180   0.000  slowerClk/Mcount_cnt_xor<27> (slowerClk/Mcount_cnt27)
+     FDC:D                     0.102          slowerClk/cnt_27
     ----------------------------------------
-    Total                      3.853ns (1.160ns logic, 2.693ns route)
-                                       (30.1% logic, 69.9% route)
+    Total                      4.296ns (2.051ns logic, 2.245ns route)
+                                       (47.7% logic, 52.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'slowerClk/divided_clk'
+  Clock period: 3.673ns (frequency: 272.277MHz)
+  Total number of paths / destination ports: 81 / 16
+-------------------------------------------------------------------------
+Delay:               3.673ns (Levels of Logic = 3)
+  Source:            current_state_FSM_FFd5 (FF)
+  Destination:       current_state_FSM_FFd6 (FF)
+  Source Clock:      slowerClk/divided_clk rising
+  Destination Clock: slowerClk/divided_clk rising
+
+  Data Path: current_state_FSM_FFd5 to current_state_FSM_FFd6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             36   0.447   1.349  current_state_FSM_FFd5 (current_state_FSM_FFd5)
+     LUT2:I1->O            1   0.205   0.580  current_state_FSM_FFd6-In1 (current_state_FSM_FFd6-In1)
+     LUT6:I5->O            1   0.205   0.580  current_state_FSM_FFd6-In2 (current_state_FSM_FFd6-In2)
+     LUT6:I5->O            1   0.205   0.000  current_state_FSM_FFd6-In3 (current_state_FSM_FFd6-In)
+     FDC:D                     0.102          current_state_FSM_FFd6
+    ----------------------------------------
+    Total                      3.673ns (1.164ns logic, 2.509ns route)
+                                       (31.7% logic, 68.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'slowerClk_2Hz/divided_clk'
+  Clock period: 2.691ns (frequency: 371.581MHz)
+  Total number of paths / destination ports: 30 / 11
+-------------------------------------------------------------------------
+Delay:               2.691ns (Levels of Logic = 1)
+  Source:            timer_out_0 (FF)
+  Destination:       timer_out_0 (FF)
+  Source Clock:      slowerClk_2Hz/divided_clk rising
+  Destination Clock: slowerClk_2Hz/divided_clk rising
+
+  Data Path: timer_out_0 to timer_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.447   0.961  timer_out_0 (timer_out_0)
+     LUT5:I3->O            3   0.203   0.650  _n05561 (_n0556)
+     FDRE:R                    0.430          timer_out_0
+    ----------------------------------------
+    Total                      2.691ns (1.080ns logic, 1.611ns route)
+                                       (40.1% logic, 59.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sevenSEG/slowerClk/divided_clk'
-  Clock period: 2.266ns (frequency: 441.248MHz)
-  Total number of paths / destination ports: 25 / 13
+  Clock period: 2.973ns (frequency: 336.344MHz)
+  Total number of paths / destination ports: 33 / 13
 -------------------------------------------------------------------------
-Delay:               2.266ns (Levels of Logic = 1)
-  Source:            sevenSEG/count_0 (FF)
-  Destination:       sevenSEG/count_0 (FF)
+Delay:               2.973ns (Levels of Logic = 2)
+  Source:            sevenSEG/count_1 (FF)
+  Destination:       sevenSEG/seven_out_3 (FF)
   Source Clock:      sevenSEG/slowerClk/divided_clk rising
   Destination Clock: sevenSEG/slowerClk/divided_clk rising
 
-  Data Path: sevenSEG/count_0 to sevenSEG/count_0
+  Data Path: sevenSEG/count_1 to sevenSEG/seven_out_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              13   0.447   0.932  sevenSEG/count_0 (sevenSEG/count_0)
-     INV:I->O              1   0.206   0.579  sevenSEG/Mcount_count_xor<0>11_INV_0 (sevenSEG/Result<0>)
-     FD:D                      0.102          sevenSEG/count_0
+     FD:C->Q              18   0.447   1.297  sevenSEG/count_1 (sevenSEG/count_1)
+     LUT6:I2->O            2   0.203   0.721  sevenSEG/Mmux_count[1]_seven_out3[6]_wide_mux_3_OUT411 (sevenSEG/Mmux_count[1]_seven_out3[6]_wide_mux_3_OUT411)
+     LUT6:I4->O            1   0.203   0.000  sevenSEG/Mmux_count[1]_seven_out3[6]_wide_mux_3_OUT36 (sevenSEG/count[1]_seven_out3[6]_wide_mux_3_OUT<2>)
+     FD:D                      0.102          sevenSEG/seven_out_2
     ----------------------------------------
-    Total                      2.266ns (0.755ns logic, 1.511ns route)
-                                       (33.3% logic, 66.7% route)
+    Total                      2.973ns (0.955ns logic, 2.018ns route)
+                                       (32.1% logic, 67.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 20 / 20
+  Total number of paths / destination ports: 231 / 166
 -------------------------------------------------------------------------
-Offset:              2.723ns (Levels of Logic = 1)
+Offset:              4.536ns (Levels of Logic = 3)
   Source:            rst (PAD)
-  Destination:       input_state (FF)
+  Destination:       unlocked (FF)
   Destination Clock: clk rising
 
-  Data Path: rst to input_state
+  Data Path: rst to unlocked
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            19   1.222   1.071  rst_IBUF (rst_IBUF)
-     FDC:CLR                   0.430          input_state
+     IBUF:I->O           101   1.222   2.224  rst_IBUF (rst_IBUF)
+     LUT6:I1->O            1   0.203   0.580  _n0909_inv1 (_n0909_inv)
+     LUT3:I2->O            1   0.205   0.000  unlocked_rstpot (unlocked_rstpot)
+     FD:D                      0.102          unlocked
     ----------------------------------------
-    Total                      2.723ns (1.652ns logic, 1.071ns route)
-                                       (60.7% logic, 39.3% route)
+    Total                      4.536ns (1.732ns logic, 2.804ns route)
+                                       (38.2% logic, 61.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'slowerClk/divided_clk'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 86 / 19
 -------------------------------------------------------------------------
-Offset:              1.903ns (Levels of Logic = 1)
-  Source:            sw<0> (PAD)
-  Destination:       ssd_15 (FF)
+Offset:              5.768ns (Levels of Logic = 3)
+  Source:            rst (PAD)
+  Destination:       timer_0 (FF)
   Destination Clock: slowerClk/divided_clk rising
 
-  Data Path: sw<0> to ssd_15
+  Data Path: rst to timer_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  sw_0_IBUF (sw_0_IBUF)
-     FDRE:D                    0.102          ssd_15
+     IBUF:I->O           101   1.222   2.224  rst_IBUF (rst_IBUF)
+     LUT6:I1->O            1   0.203   0.684  rst_sw[3]_OR_65_o1 (rst_sw[3]_OR_65_o1)
+     LUT6:I4->O            8   0.203   0.802  rst_sw[3]_OR_65_o3 (rst_sw[3]_OR_65_o)
+     FDR:R                     0.430          timer_0
     ----------------------------------------
-    Total                      1.903ns (1.324ns logic, 0.579ns route)
-                                       (69.6% logic, 30.4% route)
+    Total                      5.768ns (2.058ns logic, 3.710ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Offset:              3.701ns (Levels of Logic = 1)
+  Source:            changing (FF)
+  Destination:       changing (PAD)
+  Source Clock:      clk rising
+
+  Data Path: changing to changing
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   0.683  changing (changing_OBUF)
+     OBUF:I->O                 2.571          changing_OBUF (changing)
+    ----------------------------------------
+    Total                      3.701ns (3.018ns logic, 0.683ns route)
+                                       (81.6% logic, 18.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'sevenSEG/slowerClk/divided_clk'
@@ -572,41 +756,54 @@ Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    3.853|         |         |         |
----------------+---------+---------+---------+---------+
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+clk                      |    4.296|         |         |         |
+slowerClk/divided_clk    |    5.236|         |         |         |
+slowerClk_2Hz/divided_clk|    4.871|         |         |         |
+-------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock sevenSEG/slowerClk/divided_clk
 ------------------------------+---------+---------+---------+---------+
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-sevenSEG/slowerClk/divided_clk|    2.266|         |         |         |
-slowerClk/divided_clk         |    2.660|         |         |         |
+clk                           |    3.565|         |         |         |
+sevenSEG/slowerClk/divided_clk|    2.973|         |         |         |
 ------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock slowerClk/divided_clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    2.413|         |         |         |
----------------+---------+---------+---------+---------+
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+clk                      |    5.002|         |         |         |
+slowerClk/divided_clk    |    3.673|         |         |         |
+slowerClk_2Hz/divided_clk|    3.121|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock slowerClk_2Hz/divided_clk
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+slowerClk/divided_clk    |    3.649|         |         |         |
+slowerClk_2Hz/divided_clk|    2.691|         |         |         |
+-------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.39 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.34 secs
  
 --> 
 
-Total memory usage is 251060 kilobytes
+Total memory usage is 257824 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   35 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

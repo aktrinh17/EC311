@@ -1,8 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
+<<<<<<< HEAD
+  <DateModified>2018-04-18T18:12:34</DateModified>
+  <ModuleName>seven_segment</ModuleName>
+=======
   <DateModified>2018-04-18T19:10:43</DateModified>
   <ModuleName>ASM</ModuleName>
+>>>>>>> 993f93c4a5690cd694385c1dc1539b7a73483a7b
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>X:/Desktop/EC311-master/ec311_project/iseconfig/seven_segment.xreport</SavedFilePath>
   <ImplementationReportsDirectory>X:/Desktop/EC311-master/ec311_project\</ImplementationReportsDirectory>

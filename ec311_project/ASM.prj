@@ -1,4 +1,5 @@
 verilog work "clk_divider.v"
 verilog work "binary_to_segment.v"
 verilog work "seven_segment.v"
+verilog work "debouncer.v"
 verilog work "degital_lock.v"

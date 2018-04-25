@@ -43,7 +43,7 @@ module seven_segment(
 	wire [6:0] seven_out3;
 	binary_to_segment disp3(big_bin[19:15],seven_out3);
 
-clk_divider slowerClk(clk, rst, divided_clk); //slows down the clock
+clk_divider slowerClk(clk, rst, 16'b1001110001000000, divided_clk); //slows down the clock
 //Always block is missing...
 // Also count value is operating in very  high frequency? Think about how to fix it!
 	always @(posedge divided_clk) begin
